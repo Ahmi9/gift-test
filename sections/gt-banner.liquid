@@ -1,6 +1,12 @@
 {%- render 'gt-fonts', sans: section.settings.font_sans, serif: section.settings.font_serif -%}
 
 <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
   .gt-banner{
     font-family: var(--gt-font-sans);
     display: flex;
@@ -25,7 +31,8 @@
   }
 
   p {
-    border: 2px solid white
+    border: 2px solid white;
+    margin: 0;
   }
 
 
