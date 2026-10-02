@@ -1,0 +1,23 @@
+{%- render 'gt-fonts', sans: section.settings.font_sans, serif: section.settings.font_serif -%}
+<div class="gt-banner" style="font-family: var(--gt-font-sans)">Banner</div>
+
+{% schema %}
+{
+  "name": "Gift Guide banner",
+  "settings": [
+    {
+      "type": "font_picker",
+      "id": "font_sans",
+      "label": "Sans Font",
+      "default": "jost_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_serif",
+      "label": "Serif Font",
+      "default": "lora_n4"
+    }
+  ],
+  "presets": [{ "name": "Gift Guide banner" }]
+}
+{% endschema %}
