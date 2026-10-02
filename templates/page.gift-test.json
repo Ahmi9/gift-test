@@ -1,8 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "gt-blank",
   "sections": {
-    "banner": { "type": "gt-banner", "settings": {} },
-    "grid": { "type": "gt-product-grid", "settings": {} }
+    "banner": {
+      "type": "gt-banner",
+      "settings": {
+        "font_sans": "jost_n4",
+        "font_serif": "lora_n4",
+        "logo_text": "TISSO VISON",
+        "tagline": "Find the ideal gift for your loved ones.",
+        "button_link": "shopify://collections/all",
+        "button_label": "Choose Gift"
+      }
+    },
+    "grid": {
+      "type": "gt-product-grid",
+      "settings": {}
+    }
   },
-  "order": ["banner", "grid"]
+  "order": [
+    "banner",
+    "grid"
+  ]
 }
