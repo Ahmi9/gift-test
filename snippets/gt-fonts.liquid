@@ -1,0 +1,9 @@
+<style>
+    {{ sans | font_face: font_display: 'swap' }}
+    {{ serif | font_face: font_display: 'swap' }}
+
+    :root {
+        --gt-font-sans: {{ sans.family }}, {{ sans.fallback_families }};
+        --gt-font-serif: {{ serif.family }}, {{ serif.fallback_families }};
+    }
+</style>
