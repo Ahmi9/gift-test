@@ -28,6 +28,12 @@
 .gt-banner-btn {
     text-decoration: none;
     background-color: #fff544;
-    padding: 10px 20px;
+    padding: 0 28px;
     color: #000000;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 18px;
+    height: 44px;
+    font-size: 15px;
 }
