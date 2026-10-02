@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gt-banner {
+    font-family: var(--gt-font-sans);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #313131;
+    padding: 10px 50px;
+}
+
+.gt-banner-logo {
+    border: 2px solid red;
+    padding: 0;
+}
+
+.gt-banner-slogan {
+    border: 2px solid red;
+}
+
+h1 {
+    border: 2px solid white;
+    margin: 0;
+}
+
+p {
+    border: 2px solid white;
+    margin: 0;
+}

@@ -1,56 +1,17 @@
 {%- render 'gt-fonts', sans: section.settings.font_sans, serif: section.settings.font_serif -%}
-
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .gt-banner{
-    font-family: var(--gt-font-sans);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #313131;
-    padding: 10px 50px;
-  }
-
-  .gt-banner-logo {
-    border: 2px solid red;
-    padding: 0;
-  }
-
-  .gt-banner-slogan {
-    border: 2px solid red;
-  }
-
-  h1 {
-    border: 2px solid white;
-    margin: 0;
-  }
-
-  p {
-    border: 2px solid white;
-    margin: 0;
-  }
-
-
-</style>
-
-
-
+{{ 'gt-banner.css' | asset_url | stylesheet_tag }}
 
 <div class="gt-banner">
-  <div class="gt-banner-logo">
-    <h1>TISSO VISON</h1>
-  </div>
-  <div class="gt-banner-slogan">
-    <p>Find the ideal gift for your loved ones.</p>
-  </div>
-  <div class="gt-banner-btn">
-    <button>Choose Gift<span class="btn-arrow"></span></button>
-  </div>
+    <a href="{{ routes.root_url }}" class="gt-banner-logo">{{ section.settings.logo_text | escape }}</a>
+  
+    {%- if section.settings.tagline != blank -%}
+      <p class="gt-banner-slogan">{{ section.settings.tagline | escape }}</p>
+    {%- endif -%}
+  
+    {%- if section.settings.button_link != blank -%}
+      <a class="gt-banner-btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+    {%- endif -%}  
+  
 </div>
 
 {% schema %}
@@ -68,6 +29,33 @@
       "id": "font_serif",
       "label": "Serif Font",
       "default": "lora_n4"
+    },
+    {
+      "type": "header",
+      "content": "Top bar"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text",
+      "default": "TISSO VISON"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Choose Gift"
     }
   ],
   "presets": [{ "name": "Gift Guide banner" }]
