@@ -1,4 +1,5 @@
 {
+  "layout": "gt-blank",
   "sections": {
     "banner": { "type": "gt-banner", "settings": {} },
     "grid": { "type": "gt-product-grid", "settings": {} }
