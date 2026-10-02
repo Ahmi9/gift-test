@@ -15,7 +15,8 @@
 
 .gt-banner-logo {
     border: 2px solid red;
-    padding: 0;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 .gt-banner-slogan {
