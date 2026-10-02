@@ -36,4 +36,28 @@
     gap: 18px;
     height: 44px;
     font-size: 15px;
+    transition: background-color 0.35s ease, color 0.35s ease;
+    position: relative;      
+    overflow: hidden;        
+    isolation: isolate;
+}
+
+.gt-banner-btn:hover {
+  background-color: #000000;
+  color: #fff544;
+}
+
+.gt-banner-btn::before {
+  content: '';                     /* 4 */
+  position: absolute;
+  inset: 0;                        /* 5 */
+  z-index: -1;                     /* 6 */
+  background: #000000;
+  transform: scaleX(0);            /* 7 */
+  transform-origin: left;          /* 8 */
+  transition: transform 0.35s ease;
+}
+
+.gt-banner-btn:hover::before {
+  transform: scaleX(1);            /* 9 */
 }
